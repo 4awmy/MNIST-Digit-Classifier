@@ -1,0 +1,18 @@
+test_complete_results_create_table (test_compare_results.ComparisonTests.test_complete_results_create_table) ... ok
+test_different_normalization_is_rejected (test_compare_results.ComparisonTests.test_different_normalization_is_rejected) ... ok
+test_different_split_is_rejected (test_compare_results.ComparisonTests.test_different_split_is_rejected) ... ok
+test_environment_difference_is_reported (test_compare_results.ComparisonTests.test_environment_difference_is_reported) ... ok
+test_missing_run_is_rejected_without_partial_table (test_compare_results.ComparisonTests.test_missing_run_is_rejected_without_partial_table) ... ok
+test_stale_metrics_are_rejected (test_compare_results.ComparisonTests.test_stale_metrics_are_rejected) ... ok
+test_aspect_ratio_preserved_for_narrow_digit (test_preprocessing.DrawingTests.test_aspect_ratio_preserved_for_narrow_digit) ... ok
+test_blank_is_rejected (test_preprocessing.DrawingTests.test_blank_is_rejected) ... ok
+test_model_shapes_without_second_normalization (test_preprocessing.DrawingTests.test_model_shapes_without_second_normalization) ... ok
+test_normalization_and_centering (test_preprocessing.DrawingTests.test_normalization_and_centering) ... ok
+test_png_round_trip_and_invalid_input (test_preprocessing.DrawingTests.test_png_round_trip_and_invalid_input) ... ok
+test_transparency_composites_on_black (test_preprocessing.DrawingTests.test_transparency_composites_on_black) ... ok
+test_transparent_blank_is_rejected (test_preprocessing.DrawingTests.test_transparent_blank_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.114s
+
+OK

@@ -1,0 +1,14 @@
+:host { font-family: Inter, Arial, sans-serif; }
+.drawing-card { box-sizing: border-box; padding: 22px; border: 1px solid #e2e6ef; border-radius: 22px; background: white; max-width: 370px; }
+.canvas-heading { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px; color: #6c7284; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
+.live-dot { color: #54755b; }
+canvas { width: 280px; height: 280px; max-width: 100%; display: block; margin: auto; background: #000; border-radius: 12px; touch-action: none; cursor: crosshair; }
+canvas:focus-visible { outline: 3px solid #7774ee; outline-offset: 4px; }
+.drawing-hint { color: #777d8c; font-size: 12px; text-align: center; margin: 15px 0 20px; line-height: 1.5; }
+.canvas-actions { display: flex; gap: 10px; }
+button { border: 0; padding: 13px 16px; border-radius: 10px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.clear { background: #f0f2f7; color: #53596a; flex: 1; }
+.predict { background: #6256dc; color: white; flex: 2; display: flex; justify-content: space-between; }
+.predict:hover { background: #5145c9; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button:focus-visible { outline: 3px solid #a49bff; outline-offset: 2px; }

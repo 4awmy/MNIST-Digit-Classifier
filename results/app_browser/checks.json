@@ -1,0 +1,31 @@
+{
+  "url": "http://localhost:8501",
+  "status": "passed",
+  "desktop_predictions": [
+    {
+      "model": "CNN",
+      "digit": "1"
+    },
+    {
+      "model": "MLP",
+      "digit": "1"
+    },
+    {
+      "model": "Random Forest",
+      "digit": "1"
+    }
+  ],
+  "touch_prediction": "1",
+  "checks": [
+    "blank rejection",
+    "mouse drawing",
+    "three model choices",
+    "drawing preserved on model change",
+    "stale result invalidation",
+    "clear/reset",
+    "comparison table",
+    "touch drawing",
+    "no browser page errors"
+  ],
+  "tested_unix": 1791672904.769257
+}

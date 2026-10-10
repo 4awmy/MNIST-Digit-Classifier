@@ -1,0 +1,59 @@
+{
+  "dataset": "MNIST Keras archive",
+  "sha256": "731c5ac602752760c8e48fbffcf8c3b850d9dc2a2aedcf2cc48468fc17b673d1",
+  "bytes": 11490434,
+  "arrays": {
+    "x_test": {
+      "shape": [
+        10000,
+        28,
+        28
+      ],
+      "dtype": "uint8"
+    },
+    "x_train": {
+      "shape": [
+        60000,
+        28,
+        28
+      ],
+      "dtype": "uint8"
+    },
+    "y_train": {
+      "shape": [
+        60000
+      ],
+      "dtype": "uint8"
+    },
+    "y_test": {
+      "shape": [
+        10000
+      ],
+      "dtype": "uint8"
+    }
+  },
+  "development_label_counts": [
+    5923,
+    6742,
+    5958,
+    6131,
+    5842,
+    5421,
+    5918,
+    6265,
+    5851,
+    5949
+  ],
+  "test_label_counts": [
+    980,
+    1135,
+    1032,
+    1010,
+    982,
+    892,
+    958,
+    1028,
+    974,
+    1009
+  ]
+}

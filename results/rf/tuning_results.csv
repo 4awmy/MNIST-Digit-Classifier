@@ -1,0 +1,4 @@
+name,n_estimators,max_depth,val_accuracy,train_accuracy,train_seconds,tree_nodes,observed_max_depth
+A,50,20.0,0.9631,0.9994,2.187441604000014,418728,20
+B,100,20.0,0.9658,0.9994,4.2261383979998755,836682,20
+C,100,,0.9665,1.0,4.331090790999951,862140,41

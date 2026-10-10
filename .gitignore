@@ -3,3 +3,34 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# Additional training-project rules
+# Python and environment files
+*.py[cod]
+.venv/
+venv/
+Thumbs.db
+
+# Local training caches, intermediate checkpoints, and downloads
+*.zip
+mnist.npz
+models/mlp_checkpoints/
+models/cnn_checkpoints/
+*_A.keras
+*_B.keras
+*_C.keras
+rf_A.joblib
+rf_B.joblib
+rf_C.joblib
+rf_*_compressed.joblib
+backups/
+
+# Future app secrets
+.env.*
+.streamlit/secrets.toml
+
+# Keep the three final model artifacts and result evidence tracked.
+
+# Local execution and training caches
+.cache/
+.runtime/

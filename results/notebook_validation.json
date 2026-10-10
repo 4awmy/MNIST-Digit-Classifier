@@ -1,0 +1,21 @@
+{
+  "notebooks": [
+    {
+      "notebook": "Mlp.ipynb",
+      "code_cells": 9,
+      "checks": "syntax, global names, preprocessing, split, test-set separation, selection"
+    },
+    {
+      "notebook": "CNN.ipynb",
+      "code_cells": 9,
+      "checks": "syntax, global names, preprocessing, split, test-set separation, selection"
+    },
+    {
+      "notebook": "Random_forest_.ipynb",
+      "code_cells": 9,
+      "checks": "syntax, global names, preprocessing, split, test-set separation, selection"
+    }
+  ],
+  "training_executed": true,
+  "all_code_cells_executed_without_errors": true
+}

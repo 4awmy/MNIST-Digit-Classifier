@@ -1,0 +1,4 @@
+gpu_devices differs: rf=[]; mlp=["/physical_device:GPU:0"]; cnn=["/physical_device:GPU:0"]
+Random Forest uses CPU even if GPU devices are available. Qualify timing comparisons.
+10,000-image timing is batched inference, not single-drawing app response time.
+RF tree/node counts and neural-network parameter counts are different complexity measures.

@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-10-10T22:48:26.616778+00:00",
+  "dataset": "MNIST",
+  "split": {
+    "train": 50000,
+    "validation": 10000,
+    "test": 10000,
+    "random_state": 42,
+    "stratify": true
+  },
+  "preprocessing": {
+    "input_shape": [
+      784
+    ],
+    "dtype": "float32",
+    "normalization": "raw pixel / 255.0",
+    "polarity": "bright digit on dark background",
+    "labels": "integer digits 0-9"
+  },
+  "selection": "Highest validation accuracy at each trial minimum-val-loss checkpoint; tie: lower val_loss, fewer parameters, trial name",
+  "hyperparameters": {
+    "name": "B",
+    "hidden_units": [
+      256,
+      128
+    ],
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "l2": 0.0
+  },
+  "training": {
+    "max_epochs": 20,
+    "patience": 3,
+    "seed": 42
+  },
+  "environment": {
+    "python": "3.12.3",
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "gpu_devices": [
+      "/physical_device:GPU:0"
+    ],
+    "gpu_details": [
+      {
+        "compute_capability": [
+          8,
+          9
+        ],
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+      }
+    ],
+    "logical_cpus": 20,
+    "processor": "x86_64"
+  },
+  "metrics": {
+    "model": "MLP",
+    "selected_trial": "B",
+    "best_epoch": 5,
+    "validation_accuracy": 0.9746999740600586,
+    "test_accuracy": 0.9762,
+    "test_predictive_crossentropy": 0.08108966797590256,
+    "macro_precision": 0.9762967572850784,
+    "macro_recall": 0.9760074804209051,
+    "macro_f1": 0.9761017851997325,
+    "parameters": 235146,
+    "selected_trial_train_seconds": 39.74208363099933,
+    "total_search_train_seconds": 253.92858036599955,
+    "load_seconds": 0.16246714099997916,
+    "test_inference_seconds_10000_after_warmup": 0.42617298499953904,
+    "file_size_mib": 2.7155160903930664
+  }
+}

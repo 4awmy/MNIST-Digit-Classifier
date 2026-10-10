@@ -1,0 +1,17 @@
+{
+  "model": "MLP",
+  "selected_trial": "B",
+  "best_epoch": 5,
+  "validation_accuracy": 0.9746999740600586,
+  "test_accuracy": 0.9762,
+  "test_predictive_crossentropy": 0.08108966797590256,
+  "macro_precision": 0.9762967572850784,
+  "macro_recall": 0.9760074804209051,
+  "macro_f1": 0.9761017851997325,
+  "parameters": 235146,
+  "selected_trial_train_seconds": 39.74208363099933,
+  "total_search_train_seconds": 253.92858036599955,
+  "load_seconds": 0.16246714099997916,
+  "test_inference_seconds_10000_after_warmup": 0.42617298499953904,
+  "file_size_mib": 2.7155160903930664
+}
