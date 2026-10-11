@@ -1,10 +1,10 @@
 """Convert a bright-on-dark canvas drawing to the models' MNIST input contract."""
-import base64
-import binascii
-import io
+import base64  # To decode the Base64 data URL string emitted by the HTML5 drawing canvas
+import binascii  # To catch low-level binary/ASCII decoding exceptions from malformed canvas payloads
+import io  # To wrap decoded in-memory bytes into a stream that PIL can open as an image
 
-import numpy as np
-from PIL import Image
+import numpy as np  # High-performance array operations for pixel indexing, center-of-mass calculation, and float conversion
+from PIL import Image  # Python Imaging Library for alpha-compositing, bounding-box cropping, resizing, and padding
 
 
 class DrawingError(ValueError):

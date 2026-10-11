@@ -1,6 +1,6 @@
 """A small Streamlit v2 canvas with no third-party drawing dependency."""
-from pathlib import Path
-import streamlit as st
+from pathlib import Path  # Object-oriented path resolution to locate canvas HTML, CSS, and JS static assets
+import streamlit as st  # Streamlit custom component API to register the interactive frontend drawing canvas
 
 ASSETS = Path(__file__).resolve().parent / 'assets'
 digit_canvas = st.components.v2.component(

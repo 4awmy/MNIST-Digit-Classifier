@@ -1,10 +1,10 @@
 """Load project-owned artifacts and adapt predictions for the drawing app."""
-from pathlib import Path
-import time
+from pathlib import Path  # Object-oriented filesystem path manipulation to check model files and resolve directories
+import time  # High-precision timer (perf_counter) to measure real-time inference latency in milliseconds
 
-import numpy as np
+import numpy as np  # Vector and matrix operations for formatting input arrays and normalizing probability distributions
 
-from preprocessing import model_input
+from preprocessing import model_input  # Formats the normalized (28, 28) digit into the tensor shape expected by each model
 
 MODEL_FILES = {'Random Forest': 'rf_final.joblib', 'MLP': 'mlp_final.keras', 'CNN': 'cnn_final.keras'}
 
@@ -14,13 +14,13 @@ def load_artifact(name, path):
     if not path.is_file():
         raise FileNotFoundError(f'{path.name} is missing. Add the saved model file to the models folder.')
     if name == 'Random Forest':
-        import joblib
+        import joblib  # Lightweight deserialization library for scikit-learn models stored in .joblib files
         model = joblib.load(path)
         if model.n_features_in_ != 784 or not np.array_equal(model.classes_, np.arange(10)):
             raise ValueError('The saved forest does not match the MNIST input contract.')
         model.n_jobs = 1  # Avoid thread startup overhead for one drawing.
     else:
-        from tensorflow import keras
+        from tensorflow import keras  # Keras framework to deserialize trained neural network models (.keras) without recompiling
         model = keras.models.load_model(path, compile=False)
         expected = (None, 28, 28, 1) if name == 'CNN' else (None, 784)
         if model.input_shape != expected or model.output_shape != (None, 10):

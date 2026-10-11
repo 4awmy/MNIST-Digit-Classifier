@@ -1,16 +1,16 @@
 """MNIST drawing application. Start with: python -m streamlit run app.py"""
-import os
+import os  # Access and set operating system environment variables (disable GPU for lightweight inference & silence TF logs)
 os.environ.setdefault('CUDA_VISIBLE_DEVICES', '-1')  # App inference matches CPU cloud hosting.
 os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '2')
 
-from pathlib import Path
-import numpy as np
-import pandas as pd
-import streamlit as st
+from pathlib import Path  # Object-oriented filesystem path resolution to reliably locate models, assets, and results
+import numpy as np  # Numerical array operations and vector processing for prediction probabilities and digit data
+import pandas as pd  # Tabular data structures for displaying model comparison tables and prediction charts
+import streamlit as st  # Web framework for creating the interactive user interface, layout, and state management
 
-from canvas_component import digit_canvas
-from model_io import MODEL_FILES, load_artifact, predict_digit
-from preprocessing import DrawingError, decode_canvas, prepare_digit
+from canvas_component import digit_canvas  # Custom Streamlit HTML5/JS canvas component to capture user hand-drawn digits
+from model_io import MODEL_FILES, load_artifact, predict_digit  # Model loading, file mapping, and multi-model inference functions
+from preprocessing import DrawingError, decode_canvas, prepare_digit  # Canvas image decoding, MNIST normalization, and custom error handling
 
 ROOT = Path(__file__).resolve().parent
 st.set_page_config(page_title='MNIST · Draw a digit', page_icon='✍️', layout='centered')
