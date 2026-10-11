@@ -2,7 +2,7 @@
 
 Repository: [4awmy/MNIST-Digit-Classifier](https://github.com/4awmy/MNIST-Digit-Classifier).
 
-The user will perform the Cloud deployment after the local training and GitHub update. No live deployment is claimed here. Pushing the repository and deploying the app do not retrain the models; see [what changed](changes.md).
+The user will perform the Cloud deployment after the local training and GitHub update. No live deployment is claimed here. Pushing the repository and deploying the app do not retrain the models; see [training changes](../README.md#training-changes).
 
 The deployment entry point is `app.py`, branch `main`, Python **3.12**. `requirements.txt` contains application dependencies; the larger GPU/training requirements are separate. All three final artifacts in `models/` must be present in GitHub. The app runs inference on CPU and does not train or download models on startup.
 

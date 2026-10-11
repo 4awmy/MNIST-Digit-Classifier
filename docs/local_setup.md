@@ -30,3 +30,7 @@ For Linux/WSL GPU training, install `requirements-gpu.txt` in a separate virtual
 The Linux runner adds NVIDIA wheel library directories to `LD_LIBRARY_PATH` before starting its worker and notebook kernel. On this laptop, this was needed for TensorFlow to detect the installed CUDA libraries. `python tools/setup_gpu_links.py` also configures the virtual-environment library/`ptxas` links described in the official TensorFlow guide. These changes affect the training environment; the separate CPU app environment does not use them. For manual GPU notebook execution outside the runner, configure the same library search path in the shell that launches Jupyter.
 
 Modern TensorFlow GPU support on Windows uses WSL2. Follow the official [TensorFlow pip installation guide](https://www.tensorflow.org/install/pip) and [Microsoft WSL installation guide](https://learn.microsoft.com/en-us/windows/wsl/install) when preparing another machine. Verify `tf.config.list_physical_devices('GPU')` and an actual GPU operation before starting a long run. Do not install a separate Linux NVIDIA display driver inside WSL.
+
+## Optional browser verification
+
+On Windows, install `requirements-browser.txt`, start the app at http://localhost:8501, then run `python tools/check_browser.py`. The script uses Microsoft Edge to check mouse/touch drawing, blank input, model selection, Clear and the processed-image preview. Evidence is saved in `results/app_browser/`.

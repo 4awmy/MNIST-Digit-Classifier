@@ -44,7 +44,7 @@ Train locally under Ubuntu 24.04/WSL2 in an isolated Python 3.12 environment. Ra
 
 The runner saves executed notebooks, live logs, and success/failure status. Failed runs keep diagnostic outputs; a failed model is not presented as complete. Notebook metadata records split, configuration, versions, device information, and metrics. Working dependency versions are locked after installation checks.
 
-Original team notes are retained verbatim. Clearly labelled corrections explain outdated statements; comments attached to changed code are retained in historical study excerpts. Current executable code determines the actual experiment.
+The root notebooks keep the original team notes beside smaller code cells, with factual corrections made in place. Duplicate added explanations and historical comment archives were removed. Their outputs are cleared after rearranging cells; the previously executed notebooks in `results/` remain unchanged evidence of the completed runs. The full version before cleanup is preserved on the `archive/full-project` branch. The cleanup does not change the model experiments or saved artifacts.
 
 ## Evaluation and final selection
 
