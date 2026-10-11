@@ -1,2 +1,0 @@
-model,selected_trial,best_epoch,validation_accuracy,test_accuracy,test_predictive_crossentropy,macro_precision,macro_recall,macro_f1,parameters,selected_trial_train_seconds,total_search_train_seconds,load_seconds,test_inference_seconds_10000_after_warmup,file_size_mib
-MLP,B,5,0.9746999740600586,0.9762,0.08108966797590256,0.9762967572850784,0.9760074804209051,0.9761017851997325,235146,39.74208363099933,253.92858036599955,0.16246714099997916,0.42617298499953904,2.7155160903930664

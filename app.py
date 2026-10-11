@@ -3,7 +3,6 @@ import os
 os.environ.setdefault('CUDA_VISIBLE_DEVICES', '-1')  # App inference matches CPU cloud hosting.
 os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '2')
 
-import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -56,7 +55,7 @@ for name, filename in MODEL_FILES.items():
             load_errors.append(f'{name}: {type(exc).__name__}: {exc}')
 if len(models) < 3:
     missing = [name for name in MODEL_FILES if name not in models]
-    st.warning('Models still needed: ' + ', '.join(missing) + '. Finish local training to enable all three choices.')
+    st.warning('Models still needed: ' + ', '.join(missing) + '. Add the missing saved model files to enable all three choices.')
 if load_errors:
     st.error('A saved model could not be loaded. Check the model files and matching package versions.')
     with st.expander('Loading details'):
@@ -113,6 +112,6 @@ with st.expander('Compare the three models'):
                                     'macro_f1': st.column_config.NumberColumn('Macro F1', format='%.4f'),
                                     'file_size_mib': st.column_config.NumberColumn('Size (MiB)', format='%.2f')})
     else:
-        st.caption('The measured comparison will appear after all three training runs finish.')
+        st.caption('Model comparison data is unavailable.')
     st.caption('CNN uses image features, MLP uses fully connected layers, and Random Forest combines decision trees. MNIST test accuracy may differ from performance on your drawings.')
-st.markdown('<div class="footer-note">Assignment 1 · Professional Training in AI II · Draw one digit at a time. Picture upload is a later extension.</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer-note">Assignment 1 · Professional Training in AI II · Draw one digit at a time.</div>', unsafe_allow_html=True)

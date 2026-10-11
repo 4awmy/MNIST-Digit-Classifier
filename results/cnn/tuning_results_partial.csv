@@ -1,4 +1,0 @@
-name,filters,learning_rate,batch_size,dense_units,best_epoch,epochs_run,val_loss,val_accuracy,train_accuracy_at_best_epoch,train_seconds,parameters,checkpoint
-A,"[16, 32]",0.001,128,64,6,9,0.049129780381917953,0.9857000112533569,0.9891999959945679,50.399839741000505,56714,models/cnn_checkpoints/cnn_A.keras
-B,"[32, 64]",0.001,128,64,7,10,0.044601816684007645,0.9873999953269958,0.9943400025367737,54.91055674800009,121930,models/cnn_checkpoints/cnn_B.keras
-C,"[16, 32]",0.0003,128,64,20,20,0.050316356122493744,0.986299991607666,0.9934800267219543,107.50033889099996,56714,models/cnn_checkpoints/cnn_C.keras

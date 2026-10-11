@@ -1,4 +1,0 @@
-# Local WSL GPU training; use a separate environment from the CPU app.
--c requirements-cuda.txt
--r requirements-training.txt
-tensorflow[and-cuda]==2.21.0

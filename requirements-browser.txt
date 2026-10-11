@@ -1,2 +1,0 @@
-# Optional Windows/Edge browser verification; not used by the deployed app.
-playwright==1.63.0

@@ -12,7 +12,7 @@ MODEL_FILES = {'Random Forest': 'rf_final.joblib', 'MLP': 'mlp_final.keras', 'CN
 def load_artifact(name, path):
     path = Path(path)
     if not path.is_file():
-        raise FileNotFoundError(f'{path.name} is missing. Finish local training first.')
+        raise FileNotFoundError(f'{path.name} is missing. Add the saved model file to the models folder.')
     if name == 'Random Forest':
         import joblib
         model = joblib.load(path)
